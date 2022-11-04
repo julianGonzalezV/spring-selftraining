@@ -13,6 +13,10 @@ import java.util.List;
 public class DemoRestController {
     private final DemoService demoService;
 
+    /**
+     * After Spring 4.3 If your class has only single constructor then there is no need to put @Autowired.
+     * @param demoService
+     */
     public DemoRestController(DemoService demoService) {
         this.demoService = demoService;
     }

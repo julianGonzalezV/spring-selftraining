@@ -8,6 +8,6 @@ import java.util.List;
 @Service
 public class DemoService {
     public List<DemoEntity> getAll(){
-        return Collections.singletonList(new DemoEntity("Demo1"));
+        return Collections.singletonList(new DemoEntity("Demo2"));
     }
 }
