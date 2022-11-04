@@ -5,7 +5,7 @@
     <parent>
         <artifactId>demo</artifactId>
         <groupId>com.jag.spring-selftraining</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.101</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -25,6 +25,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jag.spring-selftraining</groupId>
+            <artifactId>training-domain</artifactId>
         </dependency>
     </dependencies>
     <build>
