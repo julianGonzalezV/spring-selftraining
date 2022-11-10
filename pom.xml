@@ -7,6 +7,7 @@
 		<module>training-application</module>
 		<module>training-domain</module>
 		<module>training-infrastructure</module>
+		<module>training-clr</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
