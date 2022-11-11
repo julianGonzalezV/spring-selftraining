@@ -12,9 +12,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.IntStream;
 
 /**
@@ -40,7 +44,7 @@ public class ClrApplication{
 		return builder.build();
 	}
 
-	@Bean
+	//@Bean
 	public CommandLineRunner runner1(RestTemplate restTemplate) throws Exception{
 		return args -> {
 			LOG.info("Starting CLR-1");
@@ -61,6 +65,22 @@ public class ClrApplication{
 			LOG.info("Finishing CLR-2");
 		};
 	}
+
+	@Bean
+	public CommandLineRunner fizzBuzzRunner() throws Exception{
+		return args -> {
+			LOG.info("Starting fizzBuzzRunner ");
+			IntStream.range(1,101).forEach(
+					number-> {
+						String result = "";
+						if(number%3 == 0) result += result.concat("Fizz");
+						if(number%5 == 0)  result +=  result.concat("Buzz");
+						LOG.info(result.isEmpty()? Integer.toString(number):result);
+					});
+			LOG.info("Finishing fizzBuzzRunner");
+		};
+	}
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(ClrApplication.class, args);
