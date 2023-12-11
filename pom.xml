@@ -30,6 +30,11 @@
 				<artifactId>training-domain</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.jag.spring-selftraining</groupId>
+				<artifactId>training-infrastructure</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
